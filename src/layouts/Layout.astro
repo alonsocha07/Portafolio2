@@ -16,36 +16,41 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-white-bg dark:bg-darkBackground" style="">
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+
+	body {
+		background-image: url(../../public/Assets/Backgrounds/Dark-bg.svg);
+		background-repeat: no-repeat;
+		background-size:cover;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+	@media screen and (max-width: 1537px) {
+		body{
+			background-image: url(../../public/Assets/Backgrounds/Dark-bg-lg.svg);
+			}
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	@media screen and (max-width: 1300px) {
+		body{
+			background-image: url(../../public/Assets/Backgrounds/Dark-bg-md.svg);
+			}
 	}
+	@media screen and (max-width: 1100px) {
+		body{
+			background-image: url(../../public/Assets/Backgrounds/Dark-bg-sm.svg);
+			}
+	}
+	@media screen and (max-width: 950px) {
+		body{
+			background-image: url(../../public/Assets/Backgrounds/Dark-bg-xsm.svg);
+			}
+	}
+	@media screen and (max-width: 768px) {
+		body{
+			background-image: none;
+			}
+	}
+
 </style>
