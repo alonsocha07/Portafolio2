@@ -1,40 +1,67 @@
 <div class="sticky bottom-40">
-    <div id="floatBar" class="flex justify-between w-72 h-10 border-[1px] border-[#161921] rounded-3xl mx-auto cursor-pointer hover:scale-110 transition-transform">
-        <div class="flex ml-4 items-center gap-2">
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/person.svg" alt=""></div>
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/book.svg" alt=""></div>
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/projects.svg" alt=""></div>
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/react.svg" alt=""></div>
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/certificate.svg" alt=""></div>
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/mail.svg" alt=""></div>
-           
+    <div class="flex justify-center items-center">
+
+        <div id="floatBar" class="flex justify-center w-72 h-10 border-[1px] border-[#161921] rounded-3xl ml-1/2 cursor-pointer hover:scale-110 transition-transform">
+            <div class="flex items-center gap-3">
+                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/person.svg" alt=""></div>
+                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/book.svg" alt=""></div>
+                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/projects.svg" alt=""></div>
+                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/react.svg" alt=""></div>
+                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/certificate.svg" alt=""></div>
+                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/mail.svg" alt=""></div>
+                
+            </div>
+            
         </div>
-        <div class="flex items-center mr-2 pl-1 border-l-[1px] border-[#343841]">
-            <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/sun.svg" alt=""></div>
+        <div id="themeSwitch" class="flex items-center h-14 w-14 ml-5 justify-center rounded-full hover:scale-110 transition-transform">
+            <div><img id="sun" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer" src="../../public/Assets/icons/sun.svg" alt="Toogle dark mode"></div>
+            <div><img id="moon" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer" src="../../public/Assets/icons/moon.svg" alt="Toogle light mode"></div>
         </div>
+        
     </div>
 </div>
 
 <style>
-    #floatBar{
+    #floatBar, #themeSwitch {
         background-color: #13151A;
         opacity: 92%;
-        border: 1px solid #343841;
-       
+        border: 1px solid #343841;     
     }
 </style>
-<!-- 
-<div class="sticky-footer">
-    <p>Este es el pie de página pegajoso.</p>
-</div>
 
-<style>
-     .sticky-footer {
-            position: sticky;
-            bottom: 0;
-            background-color: #333; /* Puedes cambiar el color de fondo según tus preferencias */
-            color: #fff; /* Puedes cambiar el color del texto según tus preferencias */
-            padding: 10px;
-            text-align: center;
+<script is:inline>
+    const sunIcon = document.querySelector('#sun');
+    const moonIcon = document.querySelector('#moon');
+   
+    const iconToggle = () => {
+        moonIcon.classList.toggle('hidden');
+        sunIcon.classList.toggle('hidden');
+    }
+
+    const setDark = () => {
+        document.documentElement.classList.add('dark');
+        moonIcon.classList.add('hidden');
+    }
+
+    const themeSwitch = () => {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("theme", "light");
+            iconToggle();
+            return;
         }
-</style> -->
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        iconToggle();
+    }
+
+    sunIcon.addEventListener('click', ()=> {
+        themeSwitch();
+    })
+
+    moonIcon.addEventListener('click', ()=> {
+        themeSwitch();
+    })
+
+    setDark();
+</script>
