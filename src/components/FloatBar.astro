@@ -1,14 +1,14 @@
-<div class="sticky bottom-40">
+<div class="sticky bottom-10">
     <div class="flex justify-center items-center">
 
         <div id="floatBar" class="flex justify-center w-72 h-10 border-[1px] border-[#161921] rounded-3xl ml-1/2 cursor-pointer hover:scale-110 transition-transform">
             <div class="flex items-center gap-3">
-                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/person.svg" alt=""></div>
-                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/book.svg" alt=""></div>
-                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/projects.svg" alt=""></div>
-                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/react.svg" alt=""></div>
-                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/certificate.svg" alt=""></div>
-                <div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/mail.svg" alt=""></div>
+                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/person.svg" alt=""></div></a>
+                <a href="#Experience"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/book.svg" alt=""></div></a>
+                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/projects.svg" alt=""></div></a>
+                <a href="#Technologies"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/react.svg" alt=""></div></a>
+                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/certificate.svg" alt=""></div></a>
+                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/mail.svg" alt=""></div></a>
                 
             </div>
             
@@ -33,6 +33,9 @@
     const sunIcon = document.querySelector('#sun');
     const moonIcon = document.querySelector('#moon');
    
+    const userTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+
     const iconToggle = () => {
         moonIcon.classList.toggle('hidden');
         sunIcon.classList.toggle('hidden');
@@ -41,6 +44,15 @@
     const setDark = () => {
         document.documentElement.classList.add('dark');
         moonIcon.classList.add('hidden');
+    }
+
+    const themeCheck = () => {
+        if (userTheme === 'dark' || (!userTheme && systemTheme)) {
+            document.documentElement.classList.add('dark');
+            moonIcon.classList.add('hidden');
+            return;
+        }
+        sunIcon.classList.add('hidden');
     }
 
     const themeSwitch = () => {
@@ -63,5 +75,5 @@
         themeSwitch();
     })
 
-    setDark();
+    themeCheck();
 </script>

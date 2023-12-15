@@ -3,7 +3,7 @@ import TechLogoSmall from "../TechLogoSmall.astro";
 
 ---
 
-<section class="w-auto  bg-white dark:bg-background rounded-2xl mt-6 p-5 shadow-sectionShadow dark:shadow-dark-sectionShadow">
+<section id="Experience" class="w-auto  bg-white dark:bg-background rounded-2xl mt-6 p-5 shadow-sectionShadow dark:shadow-dark-sectionShadow">
 <div>
     <h3 class="text-3xl font-medium mb-4 dark:text-white">Experience</h3>
     <ol class="relative border-s border-gray-400 dark:border-gray-700">                  
@@ -12,13 +12,15 @@ import TechLogoSmall from "../TechLogoSmall.astro";
             <time class="mb-1 text-sm font-normal leading-none  dark:text-gray-500">November 2023 -</time> 
             <time class="mb-1 text-sm font-normal leading-none  dark:text-gray-500">February 2024</time>
             
-            <div class="flex items-center gap-3">
+            <div class="flex items-center  max-[550px]:flex-col max-[550px]:items'left">
                 <h3 class="text-xl font-semibold text-primary ">Internship J&G Solutions</h3>
-                <TechLogoSmall src="../../public/Assets/technologies/html5.svg"/>
-                <TechLogoSmall src="../../public/Assets/technologies/vue.svg"/>
-                <TechLogoSmall src="../../public/Assets/technologies/net.png"/>
-                <TechLogoSmall src="../../public/Assets/technologies/sql.png"/>
-                <TechLogoSmall src="../../public/Assets/technologies/git.svg"/>
+                <div class="flex gap-3">
+                    <TechLogoSmall src="../../public/Assets/technologies/html5.svg"/>
+                    <TechLogoSmall src="../../public/Assets/technologies/vue.svg"/>
+                    <TechLogoSmall src="../../public/Assets/technologies/net.png"/>
+                    <TechLogoSmall src="../../public/Assets/technologies/sql.png"/>
+                    <TechLogoSmall src="../../public/Assets/technologies/git.svg"/>
+                </div>
             </div>
             
             <p class="text-base font-normal dark:text-white-text mb-3">• Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, vero non iusto impedit debitis culpa repellat veritatis dignissimos explicabo et neque quos asperiores natus ipsum maiores! Ipsa voluptatem quisquam pariatur!</p>
