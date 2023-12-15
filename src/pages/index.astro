@@ -1,14 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Experience from "../components/Experience.astro";
+import Header from "../components/sections/Header.astro";
+import Experience from "../components/sections/Experience.astro";
+import Technologies from "../components/sections/Technologies.astro";
+import FloatBar from "../components/FloatBar.astro";
 ---
 
 <Layout title="Alonso Chaves Portfolio">
+ 
+  
   <div class="max-w-4xl mx-auto dark:text-white-text" >
     <main class="px-4">
-		<Header></Header>
+		<Header/>
     <Experience/>
+    <Technologies/>
+    <FloatBar/>
 	</main>
   </div>
 </Layout>

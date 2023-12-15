@@ -12,22 +12,24 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="../Assets/codigo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-white-bg dark:bg-darkBackground" style="">
+	<body class="bg-white-bg bg-light-bg dark:bg-darkBackground dark:bg-dark-bg" style="">
 		<slot />
 	</body>
 </html>
 <style is:global>
 
-	body {
-		background-image: url(../../public/Assets/Backgrounds/Dark-bg.svg);
+	 body {
+		
 		background-repeat: no-repeat;
 		background-size:cover;
-	}
-	@media screen and (max-width: 1537px) {
+		background-attachment: fixed;
+		background-position: center;
+	} 
+	/* @media screen and (max-width: 1537px) {
 		body{
 			background-image: url(../../public/Assets/Backgrounds/Dark-bg-lg.svg);
 			}
@@ -46,11 +48,11 @@ const { title } = Astro.props;
 		body{
 			background-image: url(../../public/Assets/Backgrounds/Dark-bg-xsm.svg);
 			}
-	}
+	}*/
 	@media screen and (max-width: 768px) {
 		body{
-			background-image: none;
+			background-image: none !important;
 			}
-	}
+	}  
 
 </style>
