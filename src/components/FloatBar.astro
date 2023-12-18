@@ -3,19 +3,38 @@
 
         <div id="floatBar" class="flex justify-center w-72 h-10 border-[1px] border-[#161921] rounded-3xl ml-1/2 cursor-pointer hover:scale-110 transition-transform">
             <div class="flex items-center gap-3">
-                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/person.svg" alt=""></div></a>
-                <a href="#Experience"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/book.svg" alt=""></div></a>
-                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/projects.svg" alt=""></div></a>
-                <a href="#Technologies"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/react.svg" alt=""></div></a>
-                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/certificate.svg" alt=""></div></a>
-                <a href="#Header"><div><img class="w-8 h-8 hover:bg-neutral-700" src="../../public/Assets/icons/mail.svg" alt=""></div></a>
                 
+                <a href="#Header" id="aHeader">
+                    <div id="divHeader" class="hidden absolute bottom-14 mr-8 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Me</p></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/person.svg" alt=""></div>
+                </a>
+
+                <a href="#Experience" id="aExperience">
+                    <div id="divExperience" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Experience</p></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/book.svg" alt=""></div>
+                </a>
+                <a href="#Header" id="aProjects">
+                     <div id="divProjects" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Projects</p></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/projects.svg" alt=""></div>
+                </a>
+                <a href="#Technologies" id="aTechnologies">
+                     <div id="divTechnologies" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Technologies</p></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/react.svg" alt=""></div>
+                </a>
+                <a href="#Header" id="aEducation">
+                     <div id="divEducation" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Education</p></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/certificate.svg" alt=""></div>
+                </a>
+                <a href="#Header" id="aContact">
+                     <div id="divContact" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Contact</p></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/mail.svg" alt="">
+                </div></a>
             </div>
             
         </div>
         <div id="themeSwitch" class="flex items-center h-14 w-14 ml-5 justify-center rounded-full hover:scale-110 transition-transform">
-            <div><img id="sun" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer" src="../../public/Assets/icons/sun.svg" alt="Toogle dark mode"></div>
-            <div><img id="moon" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer" src="../../public/Assets/icons/moon.svg" alt="Toogle light mode"></div>
+            <div><img id="sun" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer rounded-full" src="../../public/Assets/icons/sun.svg" alt="Toogle dark mode"></div>
+            <div><img id="moon" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer rounded-full" src="../../public/Assets/icons/moon.svg" alt="Toogle light mode"></div>
         </div>
         
     </div>
@@ -26,6 +45,26 @@
         background-color: #13151A;
         opacity: 92%;
         border: 1px solid #343841;     
+    }
+
+
+    #aHeader:hover #divHeader {
+      display: block;
+    }
+    #aExperience:hover #divExperience {
+      display: block;
+    }
+    #aProjects:hover #divProjects {
+      display: block;
+    }
+    #aTechnologies:hover #divTechnologies {
+      display: block;
+    }
+    #aEducation:hover #divEducation {
+      display: block;
+    }
+    #aContact:hover #divContact {
+      display: block;
     }
 </style>
 
@@ -76,4 +115,8 @@
     })
 
     themeCheck();
+
+
+    //Names of titles
+    const aHeader = document.querySelector('#aHeader');
 </script>
