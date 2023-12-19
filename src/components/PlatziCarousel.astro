@@ -1,0 +1,135 @@
+---
+import CourseCertificate from "./CourseCertificate.astro";
+
+---
+
+<div class="flex">
+    <button id="prev-btn" onclick="prev()">Anterior</button>
+
+    <div id="carousel-container" class="bg-blue">
+        <div id="carousel">
+            <!--HTML CSS -->
+            <div class="carousel-item">
+                <p class="text-2xl font-semibold text-primary"> HTML and CSS</p>
+                <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/01-diploma-frontend-developer_page-0001.jpg" name="FrontEnd Developer"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/02-diploma-frontend-developer-practico_page-0001.jpg" name="Practical FrontEnd Developer"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/03-diploma-html-css_page-0001.jpg" name="HTML y CSS Definitive"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/04-diploma-html-practico_page-0001.jpg" name="Practical HTML y CSS"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/05-diploma-mobile-first_page-0001.jpg" name="Responsive Designe"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/06-diploma-sass_page-0001.jpg" name="SASS Fundamentals"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/07-diploma-diseno-programadores_page-0001.jpg" name="Desinge for developers"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/08-diploma-sistemas-diseno_page-0001.jpg" name="Designe systems"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/09-diploma-css-grid_page-0001.jpg" name="Basics CSS Grid"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/10-diploma-practico-css_page-0001.jpg" name="CSS Layout"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/11-diploma-css-grid-layout_page-0001.jpg" name="CSS Grid Layout"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/12-diploma-flexbox-css-grid_page-0001.jpg" name="Web Designe with CSS Grid and Flexbox"/>
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/14-diploma-transformaciones-transiciones-css_page-0001.jpg" name="Transformations and transitions with CSS">
+                    <CourseCertificate src="../../public/Assets/platzi/htmlcss/15-diploma-animaciones-css_page-0001.jpg" name="CSS Animations"/>
+               </div>
+            </div>
+            <!--JS -->
+            <div class="carousel-item ">
+                <p class="text-2xl font-semibold text-primary">JavaScript</p>
+                <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+                    <CourseCertificate src="../../public/Assets/platzi/js/01-diploma-basico-javascript_page-0001.jpg" name="Basic Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/02-diploma-javascript-practico_page-0001.jpg" name="Practical Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/03-diploma-javascript-practico-matematicas_page-0001.jpg" name="Javascript: Maths and basic stadistic"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/04-diploma-javascript-practico-videojuegos_page-0001.jpg" name="Practical course videogame"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/05-diploma-javascript-closures-scope_page-0001.jpg" name="Closures and Scope"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/06-diploma-ecmascript-6_page-0001.jpg" name="Ecmascript: History and javascript versions"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/07-diploma-javascript-poo_page-0001.jpg" name="Basic: Object-oriented programming with Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/08-diploma-javascript-poo-intermedio_page-0001.jpg" name="Medium: Object-oriented programming with Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/09-diploma-arrays_page-0001.jpg" name="Array manipulations with Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/11-diploma-javascript-clean-code_page-0001.jpg" name="Javascript clean code"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/12-diploma-estructuras-datos_page-0001.jpg" name="Data structure with Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/13-diploma-complejidad-js_page-0001.jpg" name="Algorithmic complexity with Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/14-diploma-devtools_page-0001.jpg" name="Debuggin with DevTools"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/15-diploma-javascript-navegador_page-0001.jpg" name="Javascript Engine (V8)"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/16-diploma-asincronismo-js_page-0001.jpg" name="asynchronous with JavaScript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/17-diploma-api_page-0001.jpg" name="API Rest With Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/18-diploma-api-practico_page-0001.jpg" name="Practical API Rest With Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/19-diploma-api-profesional_page-0001.jpg" name="Professional API Rest With Javascript"/>
+                    <CourseCertificate src="../../public/Assets/platzi/js/20-diploma-animaciones-css-practico_page-0001.jpg" name="Animations with CSS and JavaScript"/>
+               </div>
+            </div>
+            <!--React -->
+            <div class="carousel-item ">Elemento 3</div>
+            <!--Vue -->
+            <div class="carousel-item ">Elemento 4</div>
+     
+    </div>
+</div>
+
+<button id="next-btn" onclick="next()">Siguiente</button>
+
+</div>
+<script is:inline> 
+  // JavaScript para controlar el carrusel
+  const carousel = document.getElementById('carousel');
+    let currentIndex = 0;
+
+    function showItem(index) {
+      const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+      const newPosition = -index * itemWidth;
+      carousel.style.transform = `translateX(${newPosition}px)`;
+      currentIndex = index;
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel-item').length;
+      showItem(currentIndex);
+    }
+
+    function prev() {
+      currentIndex = (currentIndex - 1 + document.querySelectorAll('.carousel-item').length) % document.querySelectorAll('.carousel-item').length;
+      showItem(currentIndex);
+    }
+
+    // Intervalo de tiempo para cambiar automáticamente los elementos (opcional)
+    
+  </script>
+
+<style>
+   #carousel-container {
+      overflow: hidden;
+      width: 80%;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    #carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* #prev-btn,
+    #next-btn {
+     
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    #prev-btn {
+      left: 10px;
+    }
+
+    #next-btn {
+      right: 10px;
+    } */
+</style>
