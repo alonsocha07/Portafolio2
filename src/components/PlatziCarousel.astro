@@ -3,10 +3,11 @@ import CourseCertificate from "./CourseCertificate.astro";
 
 ---
 
-<div class="flex">
-    <button id="prev-btn" onclick="prev()">Anterior</button>
-
-    <div id="carousel-container" class="bg-blue">
+    <div id="carousel-container">
+      <div class="flex justify-center gap-40">
+        <button id="prev-btn" class="hover:scale-110 transition-transform" onclick="prev()"><img src="../../public/Assets/icons/arrow-left.svg" alt="Before"></button>
+        <button id="next-btn" class="hover:scale-110 transition-transform" onclick="next()"><img src="../../public/Assets/icons/arrow-right.svg" alt="Next"></button>
+      </div>
         <div id="carousel">
             <!--HTML CSS -->
             <div class="carousel-item">
@@ -54,19 +55,30 @@ import CourseCertificate from "./CourseCertificate.astro";
                </div>
             </div>
             <!--React -->
-            <div class="carousel-item ">Elemento 3</div>
+            <div class="carousel-item ">
+              <p class="text-2xl font-semibold text-primary">React Js</p>
+              <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+                  <CourseCertificate src="../../public/Assets/platzi/react/01-diploma-react_compressed-1.jpg" name="React JS"/>
+                  <CourseCertificate src="../../public/Assets/platzi/react/02-diploma-react-vite-tailwindcss_compressed-1.jpg" name="React with Vitejs and TailwindCSS"/>
+                  <CourseCertificate src="../../public/Assets/platzi/react/03-diploma-react-patrones-render_compressed-1.jpg" name="Render patterns and composition"/>
+                  <CourseCertificate src="../../public/Assets/platzi/react/04-diploma-react-estado_compressed-1.jpg" name="Professional management of the state"/>
+              </div>
+          </div>
             <!--Vue -->
-            <div class="carousel-item ">Elemento 4</div>
-     
+            <div class="carousel-item ">
+              <p class="text-2xl font-semibold text-primary">Vue Js</p>
+              <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+                  <CourseCertificate src="../../public/Assets/platzi/vue/01-diploma-vuejs_page-0001.jpg" name="Introduction and fundamentals"/>
+                  <CourseCertificate src="../../public/Assets/platzi/vue/02-diploma-vuejs-componentes-composition_page-0001.jpg" name="Components and Composition API"/>
+                </div>
+          </div>
+
     </div>
 </div>
-
-<button id="next-btn" onclick="next()">Siguiente</button>
-
-</div>
-<script is:inline> 
+<script is:inline>
   // JavaScript para controlar el carrusel
   const carousel = document.getElementById('carousel');
+  carousel.style.height = '1272px';
     let currentIndex = 0;
 
     function showItem(index) {
@@ -74,6 +86,18 @@ import CourseCertificate from "./CourseCertificate.astro";
       const newPosition = -index * itemWidth;
       carousel.style.transform = `translateX(${newPosition}px)`;
       currentIndex = index;
+      if (currentIndex == 0) {
+        carousel.style.height = '1272px';
+      }
+      if (currentIndex == 1) {
+        carousel.style.height = '1840px';
+      }
+      if (currentIndex == 2) {
+        carousel.style.height = '564px';
+      }
+      if (currentIndex == 3) {
+        carousel.style.height = '304px';
+      }
     }
 
     function next() {
@@ -85,15 +109,12 @@ import CourseCertificate from "./CourseCertificate.astro";
       currentIndex = (currentIndex - 1 + document.querySelectorAll('.carousel-item').length) % document.querySelectorAll('.carousel-item').length;
       showItem(currentIndex);
     }
-
-    // Intervalo de tiempo para cambiar automáticamente los elementos (opcional)
-    
   </script>
 
 <style>
    #carousel-container {
       overflow: hidden;
-      width: 80%;
+      width: 90%;
       margin: 50px auto;
       position: relative;
     }
@@ -112,7 +133,7 @@ import CourseCertificate from "./CourseCertificate.astro";
 
     /* #prev-btn,
     #next-btn {
-     
+
       top: 50%;
       transform: translateY(-50%);
       font-size: 24px;
