@@ -6,7 +6,7 @@ export default {
 		extend: {
 			colors: {
 				'primary': '#2babab', 'primary-hover': '#35bbbb', 
-				'white': '#F8FCFF', 'white-bg': '#eff8ff', 'white-text': '#dfdfdf', 
+				'white': '#F8FCFF', 'white-bg': '#f0f4f7', 'white-text': '#dfdfdf', 
 				'background': '#161921', 'darkBackground': '#12141a'
 			},
 			backgroundImage: {
