@@ -4,7 +4,7 @@ const {src, name} = Astro.props;
 
 <div class="flex flex-col items-center ">
     <div class="flex flex-col items-center hover:scale-110 transition-transform">
-        <img class="w-16 h-16 object-contain mb-1" src={src} alt="">
+        <img class="w-16 h-16 object-contain mb-1" src={src} alt="" id={name}>
         <p>{name}</p>
     </div>
 </div>

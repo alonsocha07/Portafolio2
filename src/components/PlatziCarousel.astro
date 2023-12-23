@@ -10,9 +10,9 @@ import CourseCertificate from "./CourseCertificate.astro";
       </div>
         <div id="carousel">
             <!--HTML CSS -->
-            <div class="carousel-item">
+            <div class="carousel-item" id="itemHTMLCSS">
                 <p class="text-2xl font-semibold text-primary"> HTML and CSS</p>
-                <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+                <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 " id="gridHTMLCSS">
                     <CourseCertificate src="../../public/Assets/platzi/htmlcss/01-diploma-frontend-developer_page-0001.jpg" name="FrontEnd Developer"/>
                     <CourseCertificate src="../../public/Assets/platzi/htmlcss/02-diploma-frontend-developer-practico_page-0001.jpg" name="Practical FrontEnd Developer"/>
                     <CourseCertificate src="../../public/Assets/platzi/htmlcss/03-diploma-html-css_page-0001.jpg" name="HTML y CSS Definitive"/>
@@ -30,9 +30,9 @@ import CourseCertificate from "./CourseCertificate.astro";
                </div>
             </div>
             <!--JS -->
-            <div class="carousel-item ">
+            <div class="carousel-item" id="itemJS">
                 <p class="text-2xl font-semibold text-primary">JavaScript</p>
-                <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+                <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 " id="gridJS">
                     <CourseCertificate src="../../public/Assets/platzi/js/01-diploma-basico-javascript_page-0001.jpg" name="Basic Javascript"/>
                     <CourseCertificate src="../../public/Assets/platzi/js/02-diploma-javascript-practico_page-0001.jpg" name="Practical Javascript"/>
                     <CourseCertificate src="../../public/Assets/platzi/js/03-diploma-javascript-practico-matematicas_page-0001.jpg" name="Javascript: Maths and basic stadistic"/>
@@ -55,9 +55,9 @@ import CourseCertificate from "./CourseCertificate.astro";
                </div>
             </div>
             <!--React -->
-            <div class="carousel-item ">
+            <div class="carousel-item " id="itemReact">
               <p class="text-2xl font-semibold text-primary">React Js</p>
-              <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+              <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 " id="gridReact">
                   <CourseCertificate src="../../public/Assets/platzi/react/01-diploma-react_compressed-1.jpg" name="React JS"/>
                   <CourseCertificate src="../../public/Assets/platzi/react/02-diploma-react-vite-tailwindcss_compressed-1.jpg" name="React with Vitejs and TailwindCSS"/>
                   <CourseCertificate src="../../public/Assets/platzi/react/03-diploma-react-patrones-render_compressed-1.jpg" name="Render patterns and composition"/>
@@ -65,9 +65,9 @@ import CourseCertificate from "./CourseCertificate.astro";
               </div>
           </div>
             <!--Vue -->
-            <div class="carousel-item ">
+            <div class="carousel-item " id="itemVue">
               <p class="text-2xl font-semibold text-primary">Vue Js</p>
-              <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 max-[550px]:grid-cols-2" >
+              <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 " id="gridVue" >
                   <CourseCertificate src="../../public/Assets/platzi/vue/01-diploma-vuejs_page-0001.jpg" name="Introduction and fundamentals"/>
                   <CourseCertificate src="../../public/Assets/platzi/vue/02-diploma-vuejs-componentes-composition_page-0001.jpg" name="Components and Composition API"/>
                 </div>
@@ -78,7 +78,14 @@ import CourseCertificate from "./CourseCertificate.astro";
 <script is:inline>
   // JavaScript para controlar el carrusel
   const carousel = document.getElementById('carousel');
-  carousel.style.height = '1272px';
+
+  const gridHTMLCSS = document.getElementById('gridHTMLCSS');
+  const gridJS = document.getElementById('gridJS');
+  const gridReact = document.getElementById('gridReact');
+  const gridVue = document.getElementById('gridVue');
+
+
+  carousel.style.height =  gridHTMLCSS.offsetHeight + "px";
     let currentIndex = 0;
 
     function showItem(index) {
@@ -86,17 +93,24 @@ import CourseCertificate from "./CourseCertificate.astro";
       const newPosition = -index * itemWidth;
       carousel.style.transform = `translateX(${newPosition}px)`;
       currentIndex = index;
+
+
       if (currentIndex == 0) {
-        carousel.style.height = '1272px';
+        
+        carousel.style.height = gridHTMLCSS.offsetHeight + "px";
+        console.log(gridHTMLCSS.offsetHeight);
       }
       if (currentIndex == 1) {
-        carousel.style.height = '1840px';
+        carousel.style.height = gridJS.offsetHeight + "px";
+        console.log(gridJS.offsetHeight);
       }
       if (currentIndex == 2) {
-        carousel.style.height = '564px';
+        carousel.style.height = gridReact.offsetHeight + "px";
+        console.log(gridReact.offsetHeight);
       }
       if (currentIndex == 3) {
-        carousel.style.height = '304px';
+        carousel.style.height = gridVue.offsetHeight + "px";
+        console.log(gridVue.offsetHeight);
       }
     }
 
@@ -114,8 +128,7 @@ import CourseCertificate from "./CourseCertificate.astro";
 <style>
    #carousel-container {
       overflow: hidden;
-      width: 90%;
-      margin: 50px auto;
+      margin: 20px auto;
       position: relative;
     }
 

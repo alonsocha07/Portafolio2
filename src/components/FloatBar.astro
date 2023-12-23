@@ -71,7 +71,11 @@
 <script is:inline>
     const sunIcon = document.querySelector('#sun');
     const moonIcon = document.querySelector('#moon');
-   
+    const imgGit = document.querySelector('#imgGit');
+    const techAstro = document.querySelector('#Astro');
+    const techGitHub = document.querySelector('#GitHub');
+    
+
     const userTheme = localStorage.getItem('theme');
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 
@@ -99,11 +103,19 @@
             document.documentElement.classList.remove('dark');
             localStorage.setItem("theme", "light");
             iconToggle();
+
+            imgGit.src = "../../../public/Assets/technologies/github_light.svg";
+            techGitHub.src = "../../../public/Assets/technologies/github_light.svg";
+            techAstro.src = "../../public/Assets/technologies/astro_light.svg";
+            
             return;
         }
         document.documentElement.classList.add("dark");
         localStorage.setItem("theme", "dark");
         iconToggle();
+        imgGit.src = "../../../public/Assets/technologies/github.svg";
+        techGitHub.src = "../../../public/Assets/technologies/github.svg";
+        techAstro.src = "../../public/Assets/technologies/astro_dark.svg";
     }
 
     sunIcon.addEventListener('click', ()=> {
