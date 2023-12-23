@@ -6,35 +6,35 @@
                 
                 <a href="#Header" id="aHeader">
                     <div id="divHeader" class="hidden absolute bottom-14 mr-8 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Me</p></div>
-                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/person.svg" alt=""></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/person.svg" alt=""></div>
                 </a>
 
                 <a href="#Experience" id="aExperience">
                     <div id="divExperience" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Experience</p></div>
-                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/book.svg" alt=""></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/book.svg" alt=""></div>
                 </a>
                 <!-- <a href="#Header" id="aProjects">
                      <div id="divProjects" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Projects</p></div>
-                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/projects.svg" alt=""></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/projects.svg" alt=""></div>
                 </a> -->
                 <a href="#Technologies" id="aTechnologies">
                      <div id="divTechnologies" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Technologies</p></div>
-                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/react.svg" alt=""></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/react.svg" alt=""></div>
                 </a>
                 <a href="#Education" id="aEducation">
                      <div id="divEducation" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Education</p></div>
-                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/certificate.svg" alt=""></div>
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/certificate.svg" alt=""></div>
                 </a>
                 <a href="#Contact" id="aContact">
                      <div id="divContact" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Contact</p></div>
-                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../../public/Assets/icons/mailFloatBar.svg" alt="">
+                    <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/mailFloatBar.svg" alt="">
                 </div></a>
             </div>
             
         </div>
         <div id="themeSwitch" class="flex items-center h-14 w-14 ml-5 justify-center rounded-full hover:scale-110 transition-transform">
-            <div><img id="sun" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer rounded-full" src="../../public/Assets/icons/sun.svg" alt="Toogle dark mode"></div>
-            <div><img id="moon" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer rounded-full" src="../../public/Assets/icons/moon.svg" alt="Toogle light mode"></div>
+            <div><img id="sun" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer rounded-full" src="../Assets/icons/sun.svg" alt="Toogle dark mode"></div>
+            <div><img id="moon" class="w-10 h-10 hover:bg-neutral-700 cursor-pointer rounded-full" src="../Assets/icons/moon.svg" alt="Toogle light mode"></div>
         </div>
         
     </div>
@@ -104,18 +104,18 @@
             localStorage.setItem("theme", "light");
             iconToggle();
 
-            imgGit.src = "../../../public/Assets/technologies/github_light.svg";
-            techGitHub.src = "../../../public/Assets/technologies/github_light.svg";
-            techAstro.src = "../../public/Assets/technologies/astro_light.svg";
+            imgGit.src = "../../Assets/technologies/github_light.svg";
+            techGitHub.src = "../../Assets/technologies/github_light.svg";
+            techAstro.src = "../Assets/technologies/astro_light.svg";
             
             return;
         }
         document.documentElement.classList.add("dark");
         localStorage.setItem("theme", "dark");
         iconToggle();
-        imgGit.src = "../../../public/Assets/technologies/github.svg";
-        techGitHub.src = "../../../public/Assets/technologies/github.svg";
-        techAstro.src = "../../public/Assets/technologies/astro_dark.svg";
+        imgGit.src = "../../Assets/technologies/github.svg";
+        techGitHub.src = "../../Assets/technologies/github.svg";
+        techAstro.src = "../Assets/technologies/astro_dark.svg";
     }
 
     sunIcon.addEventListener('click', ()=> {
