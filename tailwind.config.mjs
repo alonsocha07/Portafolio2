@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'primary': '#2babab', 'primary-hover': '#35bbbb', 
+				'primary': '#2babab', 'primary-hover': '#35bbbb', 'primary-dark': "#1d8585",
 				'white': '#F8FCFF', 'white-bg': '#f0f4f7', 'white-text': '#dfdfdf', 
 				'background': '#161921', 'darkBackground': '#12141a'
 			},
