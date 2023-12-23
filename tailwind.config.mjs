@@ -10,8 +10,8 @@ export default {
 				'background': '#161921', 'darkBackground': '#12141a'
 			},
 			backgroundImage: {
-				'dark-bg': "url('public/Assets/Backgrounds/Dark-bg.svg')",
-				'light-bg': "url('public/Assets/Backgrounds/Light-bg.svg')",
+				'dark-bg': "url('../Assets/Backgrounds/Dark-bg.svg')",
+				'light-bg': "url('..//Assets/Backgrounds/Light-bg.svg')",
 			  }
 		},
 		screens: {
