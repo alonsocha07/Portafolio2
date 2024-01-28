@@ -85,7 +85,7 @@ import CourseCertificate from "./CourseCertificate.astro";
   const gridVue = document.getElementById('gridVue');
 
 
-  carousel.style.height = "1273px";
+  
     let currentIndex = 0;
 
     function showItem(index) {
@@ -123,6 +123,13 @@ import CourseCertificate from "./CourseCertificate.astro";
       currentIndex = (currentIndex - 1 + document.querySelectorAll('.carousel-item').length) % document.querySelectorAll('.carousel-item').length;
       showItem(currentIndex);
     }
+
+    function size() {
+      carousel.style.height = gridHTMLCSS.offsetHeight + "px";
+    }
+
+    size();
+
   </script>
 
 <style>
