@@ -13,10 +13,10 @@
                     <div id="divExperience" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Experience</p></div>
                     <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/book.svg" alt=""></div>
                 </a>
-                <!-- <a href="#Header" id="aProjects">
+                 <a href="#PersonalProjects" id="aProjects">
                      <div id="divProjects" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Projects</p></div>
                     <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/projects.svg" alt=""></div>
-                </a> -->
+                </a>
                 <a href="#Technologies" id="aTechnologies">
                      <div id="divTechnologies" class="hidden absolute bottom-14 bg-[#13151A] rounded-xl"><p class="mx-2 text-white-text">Technologies</p></div>
                     <div><img class="w-8 h-8 hover:bg-neutral-700 rounded-md" src="../Assets/icons/react.svg" alt=""></div>
@@ -77,8 +77,9 @@
     const imgGit = document.querySelector('#imgGit');
     const techAstro = document.querySelector('#Astro');
     const techGitHub = document.querySelector('#GitHub');
+    const openAi = document.querySelector('#OpenAI');
+    console.log(openAi);
     
-
     const userTheme = localStorage.getItem('theme');
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 
@@ -106,10 +107,12 @@
             document.documentElement.classList.remove('dark');
             localStorage.setItem("theme", "light");
             iconToggle();
-
+            console.log(openAi);
+            
             imgGit.src = "../../Assets/technologies/github_light.svg";
             techGitHub.src = "../../Assets/technologies/github_light.svg";
             techAstro.src = "../Assets/technologies/astro_light.svg";
+            openAi.src = "../Assets/technologies/openAILogo_light.svg";
             
             return;
         }
@@ -119,6 +122,7 @@
         imgGit.src = "../../Assets/technologies/github.svg";
         techGitHub.src = "../../Assets/technologies/github.svg";
         techAstro.src = "../Assets/technologies/astro_dark.svg";
+        openAi.src = "../Assets/technologies/openAILogo_dark.svg";
     }
 
     sunIcon.addEventListener('click', ()=> {

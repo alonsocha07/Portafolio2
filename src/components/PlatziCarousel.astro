@@ -98,19 +98,15 @@ import CourseCertificate from "./CourseCertificate.astro";
       if (currentIndex == 0) {
         
         carousel.style.height = gridHTMLCSS.offsetHeight + "px";
-        console.log(gridHTMLCSS.offsetHeight);
       }
       if (currentIndex == 1) {
         carousel.style.height = gridJS.offsetHeight + "px";
-        console.log(gridJS.offsetHeight);
       }
       if (currentIndex == 2) {
         carousel.style.height = gridReact.offsetHeight + "px";
-        console.log(gridReact.offsetHeight);
       }
       if (currentIndex == 3) {
         carousel.style.height = gridVue.offsetHeight + "px";
-        console.log(gridVue.offsetHeight);
       }
     }
 
@@ -126,7 +122,6 @@ import CourseCertificate from "./CourseCertificate.astro";
 
     function size() {
       carousel.style.height = gridHTMLCSS.offsetHeight + "px";
-      console.log(gridHTMLCSS.offsetHeight);
     }
 
     setTimeout(size, 500);

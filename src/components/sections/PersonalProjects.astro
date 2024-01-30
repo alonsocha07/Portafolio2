@@ -1,3 +1,84 @@
-<section>
-    Aqui van a ir los proyectos personales
+---
+import TechLogoSmall from "../TechLogoSmall.astro";
+---
+
+<section
+  id="PersonalProjects"
+  class="w-auto bg-white dark:bg-background rounded-2xl mt-6 p-5 shadow-sectionShadow dark:shadow-dark-sectionShadow"
+>
+  <div>
+    <h3 class="text-3xl font-medium mb-4 dark:text-white">Personal Projects</h3>
+    <div>
+      <h3 class="text-xl font-semibold text-primary">EducAI</h3>
+      <div class="mt-4 flex max-md:flex-col">
+        <div class="w-80 h-52 max-[395px]:w-auto max-[395px]:h-auto">
+            <a
+                href="https://educai-alonso.netlify.app/"
+                target="_blank">
+                    <img
+                    src="../Assets/projects/Educai.png"
+                    alt="Educai image"
+                    class="w-80 h-52 rounded-2xl border-[1px] border-[#262a35] hover:scale-105 transition-transform hover:cursor-pointer"
+                    />
+            </a>
+        </div>
+        <div class="flex flex-col justify-between md:w-[480px] md:ml-5 max-md:mt-3">
+          <div>
+            <p>
+                Interactive guide to learn how to use artificial intelligence correctly. Includes playgrounds with connection to the OpenAI API to get real answers. Use React, react-router and other framework hooks.
+            </p>
+
+            <div class="flex gap-3 mt-2">
+              <TechLogoSmall src="../Assets/technologies/react.svg" alt="React"/>
+              <TechLogoSmall src="../Assets/technologies/html5.svg" alt="HTML"/>
+              <TechLogoSmall src="../Assets/technologies/css.svg" alt="CSS"/>
+              <TechLogoSmall src="../Assets/technologies/openAILogo_dark.svg" alt="OpenAI" name="OpenAI"/>
+
+            </div>
+          </div>
+
+          <div class="max-md:mt-4">
+            <a
+              href="https://educai-alonso.netlify.app/"
+              target="_blank"
+              class="w-auto inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white-bg border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-bg focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+              >Visit EducAI <svg
+                class="w-3 h-3 ms-2 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg></a
+            >
+            <a
+              href="https://educai-alonso.netlify.app/"
+              target="_blank"
+              class="w-auto ml-2 inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white-bg border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-bg focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+              >View Github <svg
+                class="w-3 h-3 ms-2 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
