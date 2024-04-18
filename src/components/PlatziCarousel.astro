@@ -47,11 +47,12 @@ import CourseCertificate from "./CourseCertificate.astro";
                     <CourseCertificate src="../Assets/platzi/js/13-diploma-complejidad-js_page-0001.jpg" name="Algorithmic complexity with Javascript"/>
                     <CourseCertificate src="../Assets/platzi/js/14-diploma-devtools_page-0001.jpg" name="Debuggin with DevTools"/>
                     <CourseCertificate src="../Assets/platzi/js/15-diploma-javascript-navegador_page-0001.jpg" name="Javascript Engine (V8)"/>
-                    <CourseCertificate src="../Assets/platzi/js/16-diploma-asincronismo-js_page-0001.jpg" name="asynchronous with JavaScript"/>
+                    <CourseCertificate src="../Assets/platzi/js/16-diploma-asincronismo-js_page-0001.jpg" name="Asynchronous with JavaScript"/>
                     <CourseCertificate src="../Assets/platzi/js/17-diploma-api_page-0001.jpg" name="API Rest With Javascript"/>
                     <CourseCertificate src="../Assets/platzi/js/18-diploma-api-practico_page-0001.jpg" name="Practical API Rest With Javascript"/>
                     <CourseCertificate src="../Assets/platzi/js/19-diploma-api-profesional_page-0001.jpg" name="Professional API Rest With Javascript"/>
                     <CourseCertificate src="../Assets/platzi/js/20-diploma-animaciones-css-practico_page-0001.jpg" name="Animations with CSS and JavaScript"/>
+                    <CourseCertificate src="../Assets/platzi/js/diploma-dom_page-0001.jpg" name="DOM Manipulation"/>
                </div>
             </div>
             <!--React -->
@@ -63,14 +64,20 @@ import CourseCertificate from "./CourseCertificate.astro";
                   <CourseCertificate src="../Assets/platzi/react/03-diploma-react-patrones-render_compressed-1.jpg" name="Render patterns and composition"/>
                   <CourseCertificate src="../Assets/platzi/react/04-diploma-react-estado_compressed-1.jpg" name="Professional management of the state"/>
                   <CourseCertificate src="../Assets/platzi/react/05-diploma-react-router_page-0001.jpg" name="React Router DOM"/>
+                  <CourseCertificate src="../Assets/platzi/react/06-diploma-react-redux-profesional_page-0001.jpg" name="React Redux"/>
               </div>
           </div>
             <!--Vue -->
-            <div class="carousel-item " id="itemVue">
-              <p class="text-2xl font-semibold text-primary">Vue Js</p>
+            <div class="carousel-item " id="itemOthers">
+              <p class="text-2xl font-semibold text-primary">Others</p>
               <div class="grid grid-cols-3 grid-flow-row gap-4 py-4 " id="gridVue" >
-                  <CourseCertificate src="../Assets/platzi/vue/01-diploma-vuejs_page-0001.jpg" name="Introduction and fundamentals"/>
-                  <CourseCertificate src="../Assets/platzi/vue/02-diploma-vuejs-componentes-composition_page-0001.jpg" name="Components and Composition API"/>
+                  <CourseCertificate src="../Assets/platzi/others/01-diploma-vuejs_page-0001.jpg" name="(Vue.js) Introduction and fundamentals" imgTech="../Assets/technologies/vue.svg"/>
+                  <CourseCertificate src="../Assets/platzi/others/02-diploma-vuejs-componentes-composition_page-0001.jpg" name="(Vue.js) Components and Composition API" imgTech="../Assets/technologies/vue.svg"/>
+                  <CourseCertificate src="../Assets/platzi/others/03-diploma-vue-router_page.jpg" name="(Vue.js) Vue Router" imgTech="../Assets/technologies/vue.svg"/>
+                  <CourseCertificate src="../Assets/platzi/others/diploma-typescript-01_page-0001.jpg" name="(TypeScript) TypeScript Fundamentals" imgTech="../Assets/technologies/typescript.svg"/>
+                  <CourseCertificate src="../Assets/platzi/others/diploma-typescript-02-tipos-avanzados_page-0001.jpg" name="(TypeScript) Advanced types and functions" imgTech="../Assets/technologies/typescript.svg"/>
+                  <CourseCertificate src="../Assets/platzi/others/diploma-git-github_page-0001.jpg" name="Git and GitHub" imgTech="../Assets/technologies/github.svg"/>
+                  <CourseCertificate src="../Assets/platzi/others/diploma-chatgpt_page-0001.jpg" name="Promtp Engineering with Chat GPT" imgTech="../Assets/technologies/openAILogo_dark.svg"/>
                 </div>
           </div>
 
@@ -83,7 +90,7 @@ import CourseCertificate from "./CourseCertificate.astro";
   const gridHTMLCSS = document.getElementById('gridHTMLCSS');
   const gridJS = document.getElementById('gridJS');
   const gridReact = document.getElementById('gridReact');
-  const gridVue = document.getElementById('gridVue');
+  const gridOthers = document.getElementById('itemOthers');
 
 
   
@@ -95,19 +102,19 @@ import CourseCertificate from "./CourseCertificate.astro";
       carousel.style.transform = `translateX(${newPosition}px)`;
       currentIndex = index;
 
-
+      console.log(currentIndex);
       if (currentIndex == 0) {
         
-        carousel.style.height = gridHTMLCSS.offsetHeight + "px";
+        carousel.style.height = gridHTMLCSS.offsetHeight + 45 + "px";
       }
       if (currentIndex == 1) {
-        carousel.style.height = gridJS.offsetHeight + "px";
+        carousel.style.height = gridJS.offsetHeight + 45 + "px";
       }
       if (currentIndex == 2) {
-        carousel.style.height = gridReact.offsetHeight + "px";
+        carousel.style.height = gridReact.offsetHeight + 45 + "px";
       }
       if (currentIndex == 3) {
-        carousel.style.height = gridVue.offsetHeight + "px";
+        carousel.style.height = gridOthers.offsetHeight + 300 + "px";
       }
     }
 
@@ -122,10 +129,10 @@ import CourseCertificate from "./CourseCertificate.astro";
     }
 
     function size() {
-      carousel.style.height = gridHTMLCSS.offsetHeight + "px";
+      carousel.style.height = gridHTMLCSS.offsetHeight + 45 +"px";
     }
 
-    setTimeout(size, 500);
+    setTimeout(size, 900);
 
   </script>
 
