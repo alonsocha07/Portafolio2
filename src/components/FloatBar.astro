@@ -77,8 +77,9 @@
     const imgGit = document.querySelector('#imgGit');
     const techAstro = document.querySelector('#Astro');
     const techGitHub = document.querySelector('#GitHub');
+    const techKafka = document.querySelector('#Kafka');
     const openAi = document.querySelector('#OpenAI');
-    console.log(openAi);
+    console.log(techKafka);
     
     const userTheme = localStorage.getItem('theme');
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -113,6 +114,7 @@
             techGitHub.src = "../../Assets/technologies/github_light.svg";
             techAstro.src = "../Assets/technologies/astro_light.svg";
             openAi.src = "../Assets/technologies/openAILogo_light.svg";
+            techKafka.src = "../Assets/technologies/kafka_light.svg";
             
             return;
         }
@@ -123,6 +125,7 @@
         techGitHub.src = "../../Assets/technologies/github.svg";
         techAstro.src = "../Assets/technologies/astro_dark.svg";
         openAi.src = "../Assets/technologies/openAILogo_dark.svg";
+        techKafka.src = "../Assets/technologies/kafka_dark.png";
     }
 
     sunIcon.addEventListener('click', ()=> {
